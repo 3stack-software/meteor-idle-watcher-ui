@@ -1,0 +1,42 @@
+<template name="idleWatcherUi_InactiveModal">
+  <div id="idleWatcherUi_InactiveModal" class="modal fade" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Connection</h3>
+        </div>
+
+        <div class="modal-body">
+          {{> statusMessageTemplate connectingStatusMessage}}
+          <strong><i class="icon-off"></i> Offline</strong> You have been disconnected due to inactivity.
+        </div>
+        <div class="modal-footer" style="margin-top: 0;">
+          {{#with connectionButton}}
+          <button type="button" {{props}}>{{text}}</button>
+          {{/with}}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="idleWatcherUi_InactiveModal_connected">
+  <div class="alert alert-success">
+    <i class="icon-ok"></i> Connected
+  </div>
+</template>
+
+
+<template name="idleWatcherUi_InactiveModal_connecting">
+  <div class="alert alert-success">
+    <i class="icon-ok"></i> {{message}}
+  </div>
+</template>
+
+
+<template name="idleWatcherUi_InactiveModal_disconnected">
+  <div class="alert alert-danger">
+    <strong><i class="icon-warning-sign"></i> Disconnected</strong> We are unable to contact the server. Please check your internet connection, and try again.
+  </div>
+</template>
