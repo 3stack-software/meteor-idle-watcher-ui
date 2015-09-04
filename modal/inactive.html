@@ -8,7 +8,7 @@
 
         <div class="modal-body">
           {{> statusMessageTemplate connectingStatusMessage}}
-          <strong><i class="icon-off"></i> Offline</strong> You have been disconnected due to inactivity.
+          <strong><i class="fa fa-power-off"></i> Offline</strong> You have been disconnected due to inactivity.
         </div>
         <div class="modal-footer" style="margin-top: 0;">
           {{#with connectionButton}}
@@ -23,20 +23,20 @@
 
 <template name="idleWatcherUi_InactiveModal_connected">
   <div class="alert alert-success">
-    <i class="icon-ok"></i> Connected
+    <i class="fa fa-check"></i> Connected
   </div>
 </template>
 
 
 <template name="idleWatcherUi_InactiveModal_connecting">
   <div class="alert alert-success">
-    <i class="icon-ok"></i> {{message}}
+    <i class="fa fa-check"></i> {{message}}
   </div>
 </template>
 
 
 <template name="idleWatcherUi_InactiveModal_disconnected">
   <div class="alert alert-danger">
-    <strong><i class="icon-warning-sign"></i> Disconnected</strong> We are unable to contact the server. Please check your internet connection, and try again.
+    <strong><i class="fa fa-exclamation-triangle"></i> Disconnected</strong> We are unable to contact the server. Please check your internet connection, and try again.
   </div>
 </template>
